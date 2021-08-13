@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: whitesmoke;
+    font-family: Poppins;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10% 0;
+}
+.content-wrapper{
+    width: 90%;
+}
+.text{
+    text-align: center;
+    margin-bottom: 15%;
+}
+.title-1{
+    font-size: 27px;
+    opacity: 0.3;
+}
+strong{
+    font-size: 30px;
+    opacity: 0.8;
+
+}
+.title-2{
+    font-size: 20px;
+    opacity: 0.3;
+}
+[class*="row-"]{
+    background-color: white;
+    border-radius: 10px;
+    padding: 2% 5%;
+    margin-bottom: 5%;
+    box-shadow: 0px 10px 10px rgb(238, 238, 250);
+}
+[class*="row-"] p{
+    opacity: 0.5;
+    width: 95%;
+}
+img{
+    float: right;
+    padding-bottom: 10px;
+}
+[class*="row-"]::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.row-1{
+    border-top:5px hsl(180, 62%, 55%) solid;
+}
+.row-2{
+    border-top:5px hsl(0, 78%, 62%) solid;
+}
+.row-3{
+    border-top:5px hsl(34, 97%, 64%) solid;
+}
+.row-4{
+    border-top:5px hsl(212, 86%, 64%) solid;
+}
+
+@media only screen and (min-width: 900px) {
+    .container{
+        padding: 5% 0;
+    }
+    .text span{
+        display: block;
+    }
+    .title-1{
+        opacity: 0.8;
+    }
+    .title-2{
+       width: 40%;
+       position: relative;
+       left: 50%;
+       transform: translate(-50%, 0);
+    }
+    .text{
+        margin-bottom: 5%;
+    }
+    [class*="row-"]{
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 10px 10px rgb(238, 238, 250);
+        width: 26%;
+        padding: 2% 3%;
+    }
+    .component{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .component-wrapper{
+        width: 26%;
+    }
+    .row-1, .row-4{
+        height: fit-content;
+        margin-top: 8%;
+    }
+    .row-1{
+        margin-right: 2%;
+    }
+    .row-4{
+        margin-left: 2%;
+    }
+    .row-2, .row-3{
+        width: 100%;
+        padding: 5% 10%;
+        padding-bottom: 25%;
+    }
+    .row-2{
+        margin-bottom: 7%;
+    }
+    [class*="row-"]::after {
+        content: "";
+        clear: both;
+        display: none;
+    }
+}
